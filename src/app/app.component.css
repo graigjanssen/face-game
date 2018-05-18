@@ -1,3 +1,171 @@
-.face img {
-  height: 300px;
+.app {
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1.25em;
+  width: 80%;
+}
+
+* {
+  /* border: 1px solid #678; */
+}
+
+header {
+  background-color: #88d1b8;
+  margin-top: 0;
+  padding: 18px;
+  border-bottom: 2px solid #88b;
+}
+
+.title {
+  font-size: 2.2em;
+  color: rgb(254, 255, 237);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: #40405b;
+}
+
+.setup, .results {
+  margin-top: 80px;
+}
+
+.setup-box, .results {
+  width: 30%;
+  background-color: rgb(246, 240, 228);
+  margin: 0 auto;
+  padding: 32px 8px;
+  border: 2px solid #88d;
+  border-radius: 3px;
+}
+
+.setup-title {
+  color: #39753d;
+}
+
+label {
+  font-size: 1.15em;
+  margin-right: 8px;
+}
+
+.how-many {
+  width: 65px;
+  font-size: 1.15em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.max-row {
+  margin: 20px 0px 50px 0px;
+}
+
+.max-label {
+  color: #666;
+  font-size: .9em;
+}
+
+button {
+  font-size: 1.2em;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #eee;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+.max {
+  margin-right: 10px;
+  font-size: 1.1em;
+  padding: 6px 12px;
+  color: rgb(65, 32, 28);
+  background-color: rgb(240, 210, 165);
+}
+
+.max:hover {
+  background-color: rgb(224, 177, 105);
+}
+
+.play {
+  font-size: 1.3em;
+  background-color: rgb(57, 147, 80);
+  width: 68%;
+}
+
+.play:hover {
+  background-color: rgb(31, 108, 51);
+}
+
+.new {
+  background-color: #2172ad;
+}
+.new:hover {
+  background-color: #0d4b78;
+}
+.start-over {
+  background-color: #c6876c;
+  color: #eee;
+  font-size: .8em;
+  padding: 6px 10px;
+  position: absolute;
+  top: 8px;
+  left: 40px;
+}
+
+.in-progress {
+  position: relative;
+  padding-top: 20px;
+}
+
+.score {
+  position: absolute;
+  font-size: 1.2em;
+  top: 8px;
+  right: 60px;
+}
+
+.face {
+  margin: 32px 0 24px 0;
+}
+.face-pic {
+  min-height: 350px;
+  max-height: 350px;
+}
+
+.guess {
+  font-size: 1.4em;
+  padding: 4px;
+  text-align: center;
+}
+
+.message {
+  font-size: 1.2em;
+  color: rgb(145, 134, 121);
+  margin-top: 20px;
+}
+
+/* RESULTS */
+
+.results {
+  margin-top: 80px !important;
+  padding-top: 12px !important;
+}
+
+.final-title {
+  font-size: 1.3em;
+  margin-bottom: 24px;
+}
+
+.final-score {
+  width: 120px;
+  height: 76px;
+  font-size: 32px;
+  margin: 8px auto;
+  padding: 40px 2px 0 2px;
+  border: 2px solid rgb(92, 198, 182);
+  border-radius: 66px;
+}
+
+.final-text {
+  color: rgb(147, 139, 133);
 }

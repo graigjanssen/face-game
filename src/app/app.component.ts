@@ -17,6 +17,7 @@ export class AppComponent {
   score: number;
   message: string;
   success: boolean;
+  finalTitle: string;
   finalScore: number;
   finalText: string = '';
 
@@ -44,16 +45,21 @@ export class AppComponent {
       if (guess.toLowerCase() === name.toLowerCase()) {
         this.score++;
         this.success = true;
-        this.message = name + ' is right!';
+        this.message = `Yep! That was ${name}.`;
       } else {
         this.success = false;
-        this.message = `Oops, it's not ${guess}, it's ${name}.`;
+        this.message = `Oops, that was ${name}, not ${guess}.`;
       }
       this.answer = '';
       this.faceIndex++;
 
       if (this.faceIndex === this.total) {
         this.finalScore = (this.score / this.total) * 100;
+        this.finalTitle = this.finalScore === 100
+          ? 'Perfect!'
+          : this.finalScore >= 50
+            ? 'Nice Job!'
+            : 'Dang!';
         this.finalText = `You got ${this.score} out of ${this.total}`;
       }
     } else {
@@ -71,7 +77,6 @@ export class AppComponent {
 
   onMax() {
     this.numFaces = Faces.length;
-    this.onStartClick();
   }
 
   prepareFaces() {

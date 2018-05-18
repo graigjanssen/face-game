@@ -1,40 +1,44 @@
 <header>
-  <h2>The Face Game!</h2>
-  <h4>Who Are These People???</h4>
+  <h2 class="title">The Face Game</h2>
+  <h5 class="subtitle">Who Are These People???</h5>
 </header>
-
-<div class="setup" *ngIf="!gameStart">
-  <h3>Start New Game</h3>
-  <label>How many?
-    <input type="number" [(ngModel)]="numFaces">
-    <button class="max" (click)="onMax()">Max</button>
-    <span>{{available}} total</span>
-  </label>
-  <button class="start"
-          (click)="onStartClick()">
-    Play!
-  </button>
-</div>
-
-<div class="game" *ngIf="gameStart">
-  <div class="in-progress" *ngIf="this.faceIndex < this.total">
-    <h3>Who Am I?</h3>
-    <div class="score">{{score}}</div>
-    <div class="face">
-      <img [src]="faces[faceIndex].src" alt="">
+<div class="app">
+  <div class="setup" *ngIf="!gameStart">
+    <div class="setup-box">
+      <label>How many?
+        <input class="how-many" type="number" [(ngModel)]="numFaces" min="0" [max]="faces.length" autofocus>
+      </label>
+      <div class="max-row">
+        <button class="max" (click)="onMax()">Max</button>
+        <span class="max-label">({{available}} total)</span>
+      </div>
+      <button class="play"
+              (click)="onStartClick()">
+        Play!
+      </button>
     </div>
-    <input type="text" [(ngModel)]="answer" (keyup.enter)="onSubmit()">
   </div>
 
-  <div class="message" *ngIf="message.length > 0">{{message}}</div>
+  <div class="game" *ngIf="gameStart">
+    <div class="in-progress" *ngIf="this.faceIndex < this.total">
+      <button class="start-over" (click)="newGame()">Start Over</button>
+      <div class="score"><span class="score-label">Score: </span>{{score}} / {{total}}</div>
+      <div class="face">
+        <img class="face-pic" [src]="faces[faceIndex].src" alt="">
+      </div>
+      <input class="guess" type="text" [(ngModel)]="answer" (keyup.enter)="onSubmit()" autofocus>
+    </div>
 
-  <div class="results" *ngIf="faceIndex === this.total">
-    <h3>It's Over!!!</h3>
-    <h3 class="final-score">{{finalScore | number: '0.0-1'}}%</h3>
-    <h4 class="final-text">{{finalText}}</h4>
-    <button class="new"
-           (click)="newGame()">
-      New Game
-    </button>
+    <div class="results" *ngIf="faceIndex === this.total">
+      <h3 class="final-title">{{finalTitle}}</h3>
+      <div class="final-score">{{finalScore | number: '0.0-1'}}%</div>
+      <h4 class="final-text">{{finalText}}</h4>
+      <button class="new"
+             (click)="newGame()">
+        New Game
+      </button>
+    </div>
+
+    <div class="message" *ngIf="message.length > 0">{{message}}</div>
   </div>
 </div>
