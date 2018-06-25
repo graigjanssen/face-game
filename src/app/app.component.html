@@ -1,6 +1,5 @@
 <header>
   <h2 class="title">The Face Game</h2>
-  <h5 class="subtitle">Who Are These People???</h5>
 </header>
 <div class="app">
   <div class="setup" *ngIf="!gameStart">
@@ -12,6 +11,7 @@
         <button class="max" (click)="onMax()">Max</button>
         <span class="max-label">({{available}} total)</span>
       </div>
+      <p class="note">(lowercase is fine but spelling counts!)</p>
       <button class="play"
               (click)="onStartClick()">
         Play!
@@ -39,6 +39,9 @@
       </button>
     </div>
 
-    <div class="message" *ngIf="message.length > 0">{{message}}</div>
+    <div class="message" *ngIf="message.length > 0"
+         [ngClass]="messageStyle">
+      {{message}}
+    </div>
   </div>
 </div>

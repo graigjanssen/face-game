@@ -1,8 +1,10 @@
 .app {
   margin: 0 auto;
-  padding: 0;
+  height: 768px;
   font-size: 1.25em;
-  width: 80%;
+  width: 75%;
+  border-left: 3px solid rgb(209, 210, 189);
+  border-right: 3px solid rgb(209, 210, 189);
 }
 
 * {
@@ -10,33 +12,34 @@
 }
 
 header {
-  background-color: #88d1b8;
+  background-color: #cee9e0;
   margin-top: 0;
   padding: 18px;
-  border-bottom: 2px solid #88b;
+  border-bottom: 2px solid #d2e0d9;
 }
 
 .title {
   font-size: 2.2em;
-  color: rgb(254, 255, 237);
+  color: rgb(158, 107, 139);
   margin: 0 0 8px 0;
 }
 
 .subtitle {
   margin: 0;
-  color: #40405b;
+  color: #847c8b;
+  font-style: italic;
 }
 
 .setup, .results {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 .setup-box, .results {
-  width: 30%;
-  background-color: rgb(246, 240, 228);
+  width: 40%;
+  background-color: rgb(252, 248, 235);
   margin: 0 auto;
   padding: 32px 8px;
-  border: 2px solid #88d;
+  border: 1px solid #9c9cc9;
   border-radius: 3px;
 }
 
@@ -65,6 +68,14 @@ label {
   font-size: .9em;
 }
 
+.note {
+  width: 65%;
+  margin: 10px auto;
+  text-align: left;
+  font-size: .6em;
+  color: rgb(164, 151, 139);
+}
+
 button {
   font-size: 1.2em;
   padding: 8px 12px;
@@ -89,7 +100,7 @@ button {
 .play {
   font-size: 1.3em;
   background-color: rgb(57, 147, 80);
-  width: 68%;
+  width: 65%;
 }
 
 .play:hover {
@@ -98,6 +109,8 @@ button {
 
 .new {
   background-color: #2172ad;
+  font-size: 1.3em;
+  width: 65%;
 }
 .new:hover {
   background-color: #0d4b78;
@@ -109,7 +122,10 @@ button {
   padding: 6px 10px;
   position: absolute;
   top: 8px;
-  left: 40px;
+  left: 10%;
+}
+.start-over:hover {
+  background-color: #b8613d;
 }
 
 .in-progress {
@@ -121,7 +137,7 @@ button {
   position: absolute;
   font-size: 1.2em;
   top: 8px;
-  right: 60px;
+  right: 10%;
 }
 
 .face {
@@ -134,14 +150,28 @@ button {
 
 .guess {
   font-size: 1.4em;
+  border: 1px solid rgb(29, 52, 62);
   padding: 4px;
   text-align: center;
 }
 
 .message {
-  font-size: 1.2em;
+  width: 40%;
+  margin: 20px auto;
+  padding: 8px;
+  font-size: 1.3em;
   color: rgb(145, 134, 121);
-  margin-top: 20px;
+  border: 1px solid rgb(212, 221, 224);
+  border-radius: 4px;
+}
+
+.success {
+  background-color: rgb(238, 251, 237);
+  color: rgb(64, 135, 8);
+}
+.fail {
+  background-color: rgb(250, 239, 242);
+  color: rgb(148, 51, 16);
 }
 
 /* RESULTS */
@@ -152,7 +182,7 @@ button {
 }
 
 .final-title {
-  font-size: 1.3em;
+  font-size: 1.5em;
   margin-bottom: 24px;
 }
 

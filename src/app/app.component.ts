@@ -16,6 +16,7 @@ export class AppComponent {
   answer: string = '';
   score: number;
   message: string;
+  messageStyle: string;
   success: boolean;
   finalTitle: string;
   finalScore: number;
@@ -45,9 +46,11 @@ export class AppComponent {
       if (guess.toLowerCase() === name.toLowerCase()) {
         this.score++;
         this.success = true;
+        this.messageStyle = 'success';
         this.message = `Yep! That was ${name}.`;
       } else {
         this.success = false;
+        this.messageStyle = 'fail';
         this.message = `Oops, that was ${name}, not ${guess}.`;
       }
       this.answer = '';
@@ -64,6 +67,7 @@ export class AppComponent {
       }
     } else {
       this.success = false;
+      this.messageStyle = 'fail';
       this.message = "Make a guess!";
     }
   }
