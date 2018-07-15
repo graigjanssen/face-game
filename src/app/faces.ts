@@ -172,7 +172,7 @@ export const Faces = [
     src: 'assets/img/amy-schumer.jpg'
   },
   {
-    name: 'Hemry Fonda',
+    name: 'Henry Fonda',
     src: 'assets/img/henry-fonda.jpg'
   },
   {
