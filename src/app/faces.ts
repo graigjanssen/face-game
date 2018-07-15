@@ -230,11 +230,57 @@ export const Faces = [
   {
     name: 'Robert Duvall',
     src: 'assets/img/robert-duvall.jpg'
-  }
-
+  },
+  {
+    name: 'Danny DaVito',
+    src: 'assets/img/danny-davito.jpg'
+  },
+  {
+    name: 'Christopher Walken',
+    src: 'assets/img/christopher-walken.jpg'
+  },
+  {
+    name: 'Chris Cooper',
+    src: 'assets/img/chris-cooper.jpg'
+  },
+  {
+    name: 'Phillip Seymour Hoffman',
+    src: 'assets/img/phillip-seymour-hoffman.jpg'
+  },
+  {
+    name: 'Scarlett Johansson',
+    src: 'assets/img/scarlett-johansson.jpg'
+  },
+  {
+    name: 'Andy MacDowell',
+    src: 'assets/img/andy-macdowell.jpg'
+  },
+  {
+    name: 'Natalie Portman',
+    src: 'assets/img/natalie-portman.jpg'
+  },
+  {
+    name: 'Amy Poehler',
+    src: 'assets/img/amy-poehler.jpg'
+  },
+  {
+    name: 'Tina Fey',
+    src: 'assets/img/tina-fey.jpg'
+  },
+  {
+    name: 'Leslie Mann',
+    src: 'assets/img/leslie-mann.jpg'
+  },
+  {
+    name: 'Gwyneth Paltrow',
+    src: 'assets/img/gwyneth-paltrow.jpg'
+  },
+  {
+    name: 'Samuel L. Jackson',
+    src: 'assets/img/samuel-l-jackson.jpg'
+  },
   // {
   //   name: '',
   //   src: 'assets/img/.jpg'
   // }
-
 ];
