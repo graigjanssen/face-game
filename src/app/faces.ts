@@ -29,7 +29,7 @@ export const Faces = [
   },
   {
     name: 'Tom Hanks',
-    src: 'assets/img/tom-hanks.jpeg'
+    src: 'assets/img/tom-hanks.jpg'
   },
   {
     name: 'Sylvester Stallone',
