@@ -128,6 +128,15 @@ button {
   background-color: #b8613d;
 }
 
+.correction {
+  font-size: 1em;
+  background-color: rgb(57, 147, 80);
+}
+
+.correction:hover {
+  background-color: rgb(31, 108, 51);
+}
+
 .in-progress {
   position: relative;
   padding-top: 20px;

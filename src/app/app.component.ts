@@ -18,6 +18,7 @@ export class AppComponent {
   message: string;
   messageStyle: string;
   success: boolean;
+  corrected: boolean;
   finalTitle: string;
   finalScore: number;
   finalText: string = '';
@@ -28,6 +29,7 @@ export class AppComponent {
     this.faces = Faces.slice(0);
     this.faceIndex = 0;
     this.total = this.faces.length;
+    this.corrected = false;
   }
 
   onStartClick() {
@@ -37,6 +39,7 @@ export class AppComponent {
     this.score = 0;
     this.message = '';
     this.gameStart = true;
+    this.corrected = false;
   }
 
   onSubmit() {
@@ -55,6 +58,7 @@ export class AppComponent {
       }
       this.answer = '';
       this.faceIndex++;
+      this.corrected = false;
 
       if (this.faceIndex === this.total) {
         this.finalScore = (this.score / this.total) * 100;
@@ -77,10 +81,16 @@ export class AppComponent {
     this.faces = Faces.slice(0);
     this.numFaces = null;
     this.message = '';
+    this.corrected = false;
   }
 
   onMax() {
     this.numFaces = Faces.length;
+  }
+
+  correction() {
+    this.score++;
+    this.corrected = true;
   }
 
   prepareFaces() {

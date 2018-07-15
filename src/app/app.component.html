@@ -43,5 +43,12 @@
          [ngClass]="messageStyle">
       {{message}}
     </div>
+    <div class="message" *ngIf="message.length > 0 && messageStyle === 'fail' && !corrected">
+      Just a spelling mistake? &nbsp;
+      <button class="correction"
+            (click)="correction()">
+            Give Me Credit!
+      </button>
+    </div>
   </div>
 </div>
